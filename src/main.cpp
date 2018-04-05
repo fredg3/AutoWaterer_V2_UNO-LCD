@@ -42,7 +42,7 @@ int current_button  = 5;    // used to single button press
       // 4)Enabled? ON/OFF      Whether to disable/enable watering
       // ON    OFF
 
-// Variables for watering system
+// Variables for the watering system
 unsigned long   waterFreq       = 28800000;    // 1000millisec*60sec*60min*8 = 8 hours
 unsigned long   waterNextTime   = 28800000;    // the next time watering will occur compared to millis()
 
@@ -130,7 +130,7 @@ void menuDefault() {
     unsigned long   tempTimeMinute;
     unsigned long   tempTimeSecond;
     
-    tempTime = ( waterNextTime - millis() ) / 1000;
+    tempTime = ( waterNextTime - millis() ) / 1000; 
 
     tempTimeSecond  = tempTime % 60;
     tempTime        = tempTime / 60;
